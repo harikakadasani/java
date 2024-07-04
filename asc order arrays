@@ -1,0 +1,106 @@
+Write a program to sort the given array in ascending order.
+
+Input Format
+
+Read size of the array Read elements of the array line by line
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print elements of the array in asecending order
+
+Sample Input 0
+
+5
+54
+68
+25
+14
+74
+Sample Output 0
+
+14
+25
+54
+68
+74
+Sample Input 1
+
+4
+51
+-3
+5
+-6
+Sample Output 1
+
+-6
+-3
+5
+51
+Submissions: 559
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner sc=new Scanner(System.in);
+8
+        int n=sc.nextInt();
+9
+        int[] a=new int[n];
+10
+        int i,j;
+11
+        for(i=0;i<n;i++){
+12
+            a[i]=sc.nextInt();
+13
+        }
+14
+        for(i=0;i<n-1;i++){
+15
+            for(j=i+1;j<n;j++){
+16
+                if(a[i]>a[j]){
+17
+                    int temp=a[i];
+18
+                    a[i]=a[j];
+19
+                    a[j]=temp;
+20
+                }
+21
+            }
+22
+        }
+23
+            for(i=0;i<n;i++){
+24
+            System.out.println(a[i]);
+25
+        }
+26
+        
+27
+    }
+28
+}
